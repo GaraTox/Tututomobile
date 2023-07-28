@@ -1,0 +1,33 @@
+.bg-image{
+    background-image: url("../pictures/voiture-bg.png");
+    background-size: cover;
+    height: 100%;
+    .HomePage{
+        height: 100%;
+        padding-top: 15%;
+        text-align: center;
+        .MessageBienvenue{
+            font-size: 25px;
+        }
+        .MessageAccueil{
+            font-size: 18px;
+        }
+    }
+    .Vehicule-Vendre{
+        margin-top: 172px;
+        font-size: x-large;
+        color: rgb(209, 209, 209);
+    }
+    .Bloc-Vehicule{
+        margin-bottom: 150px;
+        width: 200px;
+        height: 230px;
+        border-radius: 10px;
+        .Vehicule{
+            width: 200px;
+            height: 230px;
+            border-radius: 10px;
+        }
+    }
+
+}

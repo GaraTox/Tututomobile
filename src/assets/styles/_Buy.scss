@@ -1,3 +1,4 @@
+@media screen and (min-width: 781px) {
 .BuyPage{
     margin-top: 90px;
     .Acheter{
@@ -13,6 +14,47 @@
             color: black;
             margin: 28px;
             border-radius: 10px;
+        }
+    }
+}
+}
+
+@media screen and (min-width: 568px) and (max-width: 780px) {
+    .BuyPage{
+        margin-top: 90px;
+        .Acheter{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;      
+            .BlocAcheter{
+                border: solid 1px black;
+                background-color: rgb(233, 233, 233);
+                width: 250px;
+                height: 300px;
+                color: black;
+                margin: 28px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .BuyPage{
+        margin-top: 90px;
+        .Acheter{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;      
+            .BlocAcheter{
+                border: solid 1px black;
+                background-color: rgb(233, 233, 233);
+                width: 250px;
+                height: 300px;
+                color: black;
+                margin: 28px;
+                border-radius: 10px;
+            }
         }
     }
 }

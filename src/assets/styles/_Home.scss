@@ -1,3 +1,4 @@
+@media screen and (min-width: 781px) {
 .bg-image{
     background-image: url("../pictures/voiture-bg.png");
     background-size: cover;
@@ -29,5 +30,75 @@
             border-radius: 10px;
         }
     }
+}
+}
 
+@media screen and (min-width: 568px) and (max-width: 780px) {
+    .bg-image{
+        background-image: url("../pictures/voiture-bg.png");
+        background-size: cover;
+        height: 100%;
+        .HomePage{
+            height: 100%;
+            padding-top: 35%;
+            text-align: center;
+            .MessageBienvenue{
+                font-size: 25px;
+            }
+            .MessageAccueil{
+                font-size: 18px;
+            }
+        }
+        .Vehicule-Vendre{
+            margin-top: 250px;
+            font-size: x-large;
+            color: rgb(209, 209, 209);
+        }
+        .Bloc-Vehicule{
+            margin-bottom: 150px;
+            width: 200px;
+            height: 230px;
+            border-radius: 10px;
+            .Vehicule{
+                width: 200px;
+                height: 230px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .bg-image{
+        background-image: url("../pictures/voiture-bg.png");
+        background-size: cover;
+        height: 100%;
+        .HomePage{
+            height: 100%;
+            padding-top: 45%;
+            text-align: center;
+            .MessageBienvenue{
+                font-size: 25px;
+            }
+            .MessageAccueil{
+                font-size: 18px;
+            }
+        }
+        .Vehicule-Vendre{
+            margin-top: 172px;
+            font-size: x-large;
+            color: rgb(209, 209, 209);
+        }
+        .Bloc-Vehicule{
+            margin-bottom: 150px;
+            width: 200px;
+            height: 230px;
+            border-radius: 10px;
+            .Vehicule{
+                width: 200px;
+                height: 230px;
+                border-radius: 10px;
+            }
+        }
+    }
 }

@@ -1,7 +1,7 @@
 [{
     "id": 1,
     "NomVoiture": "Porsche",
-    "Image" : "./assets/pictures/voiture1.jpg",
+    "Image" : "voiture1.jpg",
     "Kilometre" : "25 000 km",
     "Couleur" : "rouge",
     "Carburant" : "Diesel",
@@ -13,7 +13,7 @@
 {
     "id": 2,
     "NomVoiture": "BMW",
-    "Image" : "./assets/pictures/voiture2.jpg",
+    "Image" : "voiture2.jpg",
     "Kilometre" : "150 000 km",
     "Couleur" : "blanche",
     "Carburant" : "Essence",
@@ -25,7 +25,7 @@
 {
     "id": 3,
     "NomVoiture": "Range Rover",
-    "Image" : "./assets/pictures/voiture3.jpg",
+    "Image" : "voiture3.jpg",
     "Kilometre" : "74 500 km",
     "Couleur" : "blanche",
     "Carburant" : "Essence",
@@ -37,7 +37,7 @@
 {
     "id": 4,
     "NomVoiture": "Tesla",
-    "Image" : "./assets/pictures/voiture4.jpg",
+    "Image" : "voiture4.jpg",
     "Kilometre" : "63 100 km",
     "Couleur" : "blanche",
     "Carburant" : "Diesel",
@@ -49,7 +49,7 @@
 {
     "id": 5,
     "NomVoiture": "Audi",
-    "Image" : "./assets/pictures/voiture5.jpg",
+    "Image" : "voiture5.jpg",
     "Kilometre" : "46 700 km",
     "Couleur" : "blanche",
     "Carburant" : "Diesel",

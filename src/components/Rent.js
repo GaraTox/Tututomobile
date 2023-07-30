@@ -19,17 +19,25 @@ function Buy() {
         const [openModal, setOpenModal] = useState(false);
 
         // MESSAGE DE RDV
-          const generateRandomDate = () => {
-          const startDate = new Date(2023, 8, 29); // Date de début, ici le 1er janvier 2000
-          const endDate = new Date(); // Date actuelle (date du jour)
-          const randomTime = startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()); 
-          const generatedDate = new Date(randomTime);
-            return generatedDate;
-          };
-          const handleShowRandomDate = () => {
-          const randomDate = generateRandomDate();
-          window.alert(`RDV : ${randomDate.toDateString()}`);
-          };
+        const generateRandomDateTime = () => {
+          const year = Math.floor(Math.random() * 1) + 2023;
+          const month = Math.floor(Math.random() * 12) + 1;
+          const day = Math.floor(Math.random() * 28) + 1;
+          const hour = Math.floor(Math.random() * 24);
+          const minute = Math.floor(Math.random() * 60);
+      
+          const randomDate = new Date(year, month - 1, day, hour, minute);
+      
+          alert(`RDV : ${randomDate.toString()}`);
+        };
+
+        // BOUTON LOUER
+        const [buttonText, setButtonText] = useState('Louer');
+
+        const handleClick = () => {
+        // Changer le contenu du bouton lorsque le bouton est cliqué
+        setButtonText('Déjà loué');
+        };
 
   return (
     <section className="RentPage">
@@ -42,8 +50,8 @@ function Buy() {
                     <div><p>{item.Kilometre}</p></div>
                     <div><p>{item.Couleur}</p></div>
                     <div><p>{item.Carburant}</p></div>
-                    <div className="button"><button type="text">{ "Louer" ? "Louer" : "Déjà loué"}</button></div>
-                    <div className="button" ><button type="text" key={item.id}  onClick={handleShowRandomDate}>Prendre rendez-vous</button></div>
+                    <div className="button"><button type="text" key={item.id} onClick={handleClick}>{buttonText}</button></div>
+                    <div className="button" ><button type="text" key={item.id}  onClick={generateRandomDateTime}>Prendre rendez-vous</button></div>
                 </div>
             ))}
 

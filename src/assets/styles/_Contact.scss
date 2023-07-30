@@ -1,13 +1,16 @@
 .ContactPage{
     padding-top: 5%;
+    height: 100vh;
     footer{
         width: 100%;
-        height: max-content;
+        height: 50px;
         background-color: rgb(27, 27, 31);
+        color: white;
         display: flex;
         position: fixed;
         bottom: 0;
         text-align: center;
         justify-content: center;
+        padding-bottom: 50px;
     }
 }

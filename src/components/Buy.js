@@ -9,33 +9,42 @@ import ModalBuy from './ModalBuy';
 // import vehicule5 from '../assets/pictures/voiture5.jpg'
 
 function Buy() {
-        const [data, setData] = useState([]);
-      
-        useEffect(() => {
-          // Chargez les données à partir du fichier JSON dans l'état local du composant
-          setData(jsonData);
+      // MAP
+      const [data, setData] = useState([]);
+      useEffect(() => {
+        setData(jsonData);
         }, []);
 
-        const [openModal, setOpenModal] = useState(false);
+      // MODALE
+      const [openModal, setOpenModal] = useState(false);
+      
+      // MESSAGE DE RENDEZ VOUS
+        const generateRandomDate = () => {
+          const startDate = new Date(2023, 8, 29); // Date de début, ici le 29 juillet 2023
+          const endDate = new Date(); // Date actuelle (date du jour)
+          const randomTime = startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()); 
+          const generatedDate = new Date(randomTime);
+            return generatedDate;
+          };
+          const handleShowRandomDate = () => {
+          const randomDate = generateRandomDate();
+          window.alert(`RDV : ${randomDate.toDateString()}`);
+          };
 
   return (
     <section className="BuyPage">
         <div className="Acheter">
-
+        {openModal && <ModalBuy closeModal={setOpenModal}/>}
             {data.map(item => (
                 <div className="BlocAcheter" key={item.id}>
                     <div><h4>{item.NomVoiture}</h4></div>
-                    <div><img src={item.Image} alt="vehicule a vendre"/></div>
+                    <div><img src={item.Image} key={item.id} onClick={() => {setOpenModal(true);}} alt="vehicule a vendre"/></div>
                     <div><p>{item.Kilometre}</p></div>
                     <div><p>{item.Couleur}</p></div>
                     <div><p>{item.Carburant}</p></div>
-                    <div className="button" ><button type="text" key={item.id} onClick={() => {setOpenModal(true);}}>Voir plus</button></div>
-                    <div className="button" ><button type="text" key={item.id}>Prendre rendez-vous</button></div>
-                    {openModal && <ModalBuy closeModal={setOpenModal}/>}
-
+                    <div className="button" ><button type="text" key={item.id} onClick={handleShowRandomDate}>Prendre rendez-vous</button></div>
                 </div>
             ))}
-
         </div>
     </section>
   );

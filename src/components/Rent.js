@@ -32,12 +32,14 @@ function Buy() {
         };
 
         // BOUTON LOUER
-        const [buttonText, setButtonText] = useState('Louer');
-
-        const handleClick = () => {
-        // Changer le contenu du bouton lorsque le bouton est cliqué
-        setButtonText('Déjà loué');
-        };
+        const [rent, setRent] = useState('Louer');
+        const handleButtonClick = () =>{
+          if (rent === 'Louer'){
+            setRent('Loué');
+          }else{
+            setRent('Indisponible');
+          }
+        }
 
   return (
     <section className="RentPage">
@@ -50,11 +52,14 @@ function Buy() {
                     <div><p>{item.Kilometre}</p></div>
                     <div><p>{item.Couleur}</p></div>
                     <div><p>{item.Carburant}</p></div>
-                    <div className="button"><button type="text" key={item.id} onClick={handleClick}>{buttonText}</button></div>
+                    {item.Louer === "Louer" ? (
+                      <div className="button"><button type="text" onClick={handleButtonClick}>{rent}</button></div>)
+                      : (
+                        <div className="button"><button type="text">Indisponible</button></div>)
+                    }
                     <div className="button" ><button type="text" key={item.id}  onClick={generateRandomDateTime}>Prendre rendez-vous</button></div>
                 </div>
             ))}
-
         </div>
     </section>
   );

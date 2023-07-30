@@ -8,7 +8,8 @@
     "Année" : "2016",
     "Vitesse" : "manuel",
     "ChevauxFiscaux" : "19",
-    "NombrePortes" : "5"
+    "NombrePortes" : "5",
+    "Louer" : "Louer"
 },
 {
     "id": 7,
@@ -20,7 +21,9 @@
     "Année" : "2019",
     "Vitesse" : "automatique",
     "ChevauxFiscaux" : "25",
-    "NombrePortes" : "2"
+    "NombrePortes" : "2",
+    "Louer" : "Déjà loué"
+
 },
 {
     "id": 8,
@@ -32,7 +35,9 @@
     "Année" : "2021",
     "Vitesse" : "manuel",
     "ChevauxFiscaux" : "14",
-    "NombrePortes" : "5"
+    "NombrePortes" : "5",
+    "Louer" : "Louer"
+
 },
 {
     "id": 9,
@@ -44,7 +49,9 @@
     "Année" : "2017",
     "Vitesse" : "automatique",
     "ChevauxFiscaux" : "22",
-    "NombrePortes" : "5"
+    "NombrePortes" : "5",
+    "Louer" : "Déjà loué"
+
 },
 {
     "id": 10,
@@ -56,6 +63,7 @@
     "Année" : "2008",
     "Vitesse" : "manuel",
     "ChevauxFiscaux" : "10",
-    "NombrePortes" : "2"
+    "NombrePortes" : "2",
+    "Louer" : "Louer"
 }
 ]

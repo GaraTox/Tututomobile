@@ -9,6 +9,7 @@ function Header() {
         <Link to="/buy"><li>Acheter un véhicule</li></Link>
         <Link to="/rent"><li>Louer un véhicule</li></Link>
         <Link to="/contact"><li>Contact</li></Link>
+        <Link to="/admin"><li className="Admin">Admin</li></Link>
       </ul>
     </header>
   );

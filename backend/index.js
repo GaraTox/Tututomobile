@@ -15,7 +15,7 @@ const db = mysql.createConnection({
 	database : 'tututomobile'
 });
 
-
+// CREER UNE ANNONCE
 app.post('/create', (req, res) => {
 	const Nom = req.body.Nom;
 	const Image = req.body.Image;
@@ -37,6 +37,36 @@ app.post('/create', (req, res) => {
 	});
 })
 
+// LIRE LES ANNONCES
+app.get('/read', (req,res) => {
+	db.query("SELECT * FROM annonces",
+	(err, result) => {
+		if (err){
+			console.log(err)
+		}else{
+			res.send(result);
+		}
+	});
+});
+
+// MODIFIER UNE ANNONCE
+app.put('/update', (req, res) => {
+	const id = req.body.id;
+	db.query("UPDATE SET annonces WHERE id=?", id, (err, result) => {
+		if (err){
+			console.log(err);
+		}else{
+			res.send(result);
+		}
+	})
+})
+
+// SUPPRIMER UNE ANNONCE
+// app.delete('/delete', (req, res) => {
+
+// })
+
+// ECOUTE LE PORT 3001
 app.listen(PORT, () => {
 	console.log(`Le port de mon backend est le :"${PORT}`);
 });

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function Create() {
+    const [liste, setListe] = useState([]);
+
     const [Nom, setNom] = useState("");
     const [Image, setImage] = useState("");
     const [Kilomètres, setKilo] = useState(0);
@@ -22,7 +24,16 @@ function Create() {
         ChevauxFiscaux: ChevauxFiscaux, 
         Portes: Portes
       }).then(() => {
-        console.log("success");
+        setListe([...liste, {
+          Nom: Nom, 
+          Image: Image, 
+          Kilomètres: Kilomètres, 
+          Couleur: Couleur, 
+          Année: Année, 
+          Boite: Boite, 
+          ChevauxFiscaux: ChevauxFiscaux, 
+          Portes: Portes
+        }]);
       })
     }
 

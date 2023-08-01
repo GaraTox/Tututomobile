@@ -6,7 +6,9 @@ import rent from '../src/components/main/rent';
 import contact from '../src/components/main/contact';
 import admin from '../src/components/main/admin';
 import create from './components/main/create';
+import read from './components/main/read';
 import update from './components/main/update';
+import deleted from './components/main/delete';
 
 function LaRoute() {
   return (
@@ -19,7 +21,9 @@ function LaRoute() {
         <Route path="/contact" Component={contact}/>
         <Route path="/admin" Component={admin}/>
         <Route path="/create" Component={create}/>
+        <Route path="/read" Component={read}/>
         <Route path="/update" Component={update}/>
+        <Route path="/delete" Component={deleted}/>
       </Routes>
     </Router>
     </div>

@@ -52,19 +52,27 @@ app.get('/read', (req,res) => {
 // MODIFIER UNE ANNONCE
 app.put('/update', (req, res) => {
 	const id = req.body.id;
-	db.query("UPDATE SET annonces WHERE id=?", id, (err, result) => {
+	const Nom = req.body.Nom;
+	const Image = req.body.Image;
+	const Kilomètres = req.body.Kilomètres;
+	const Couleur = req.body.Couleur;
+	const Année = req.body.Année;
+	const Boite = req.body.Boite;
+	const ChevauxFiscaux = req.body.ChevauxFiscaux;
+	const Portes = req.body.Portes;
+	db.query("UPDATE annonces SET Nom = ? AND Image = ? AND Kilomètres = ? AND Couleur = ? AND Année = ? AND Boite = ? AND ChevauxFiscaux = ? AND Portes = ? WHERE id=?", [Nom, Image, Kilomètres, Couleur, Année, Boite, ChevauxFiscaux, Portes, id], (err, result) => {
 		if (err){
 			console.log(err);
 		}else{
 			res.send(result);
 		}
-	})
-})
+	});
+});
 
 // SUPPRIMER UNE ANNONCE
-// app.delete('/delete', (req, res) => {
+app.delete('/delete', (req, res) => {
 
-// })
+})
 
 // ECOUTE LE PORT 3001
 app.listen(PORT, () => {
